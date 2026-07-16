@@ -1,0 +1,14 @@
+.build-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem; }
+.build-card {
+  background: #fff; border-radius: 12px;
+  padding: 1.3rem; border: 1px solid #E8E1DA;
+  position: relative; overflow: hidden;
+}
+.build-card.active::before  { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--warm); }
+.build-card.future::before  { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px; background: var(--bg3); }
+.build-status { font-family: var(--mono); font-size: 0.67rem; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.4rem; }
+.build-status.active { color: var(--warm); }
+.build-status.future { color: var(--ink3); }
+.build-card h4 { font-size: 0.93rem; font-weight: 500; margin-bottom: 0.3rem; }
+.build-card p  { font-size: 0.81rem; color: var(--ink2); line-height: 1.6; }
+@media (max-width: 768px) { .build-grid { grid-template-columns: 1fr; } }

@@ -1,0 +1,18 @@
+.about-bg { background: var(--bg2); }
+.about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; align-items: start; }
+.about-quote {
+  font-family: var(--serif); font-size: 1.25rem;
+  font-style: italic; line-height: 1.55; margin-bottom: 1.25rem;
+}
+.about-body { color: var(--ink2); font-size: 0.93rem; line-height: 1.85; }
+.about-body p + p { margin-top: 0.85rem; }
+.value-item {
+  background: #fff; border-radius: 10px;
+  padding: 1rem 1.2rem; border-left: 3px solid var(--rose); margin-bottom: 0.9rem;
+}
+.value-item h4 {
+  font-size: 0.75rem; font-weight: 600; color: var(--rose);
+  letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 0.25rem;
+}
+.value-item p { font-size: 0.84rem; color: var(--ink2); line-height: 1.6; }
+@media (max-width: 768px) { .about-grid { grid-template-columns: 1fr; } }

@@ -1,0 +1,67 @@
+.hero-section {
+  min-height: 100vh;
+  display: grid; grid-template-columns: 1fr 1fr;
+  align-items: center; gap: 4rem;
+  padding: 7rem 3rem 4rem;
+  max-width: 1100px; margin: 0 auto;
+}
+.hero-eyebrow {
+  font-family: var(--mono); font-size: 0.72rem;
+  letter-spacing: 0.15em; text-transform: uppercase;
+  color: var(--rose); margin-bottom: 1.5rem;
+  display: flex; align-items: center; gap: 0.75rem;
+}
+.hero-eyebrow::before {
+  content: ''; display: block;
+  width: 28px; height: 1px; background: var(--rose);
+}
+.hero-h1 {
+  font-family: var(--serif);
+  font-size: clamp(2rem, 3.8vw, 3.1rem);
+  line-height: 1.15; margin-bottom: 1.4rem; font-weight: 400;
+}
+.hero-h1 em { font-style: italic; color: var(--rose); }
+.hero-sub {
+  font-size: 0.95rem; color: var(--ink2);
+  line-height: 1.85; margin-bottom: 2rem; max-width: 460px;
+}
+.hero-ctas { display: flex; gap: 1rem; flex-wrap: wrap; margin-bottom: 2.5rem; }
+.hero-stats { display: flex; gap: 2rem; }
+.stat-num   { font-family: var(--serif); font-size: 1.5rem; color: var(--ink); }
+.stat-label { font-size: 0.72rem; color: var(--ink3); }
+
+/* story card */
+.story-card {
+  background: #fff; border: 1px solid #E8E1DA;
+  border-radius: 16px; padding: 1.75rem;
+  position: relative; overflow: hidden;
+}
+.story-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(90deg, var(--rose), var(--warm), var(--teal));
+}
+.story-heading {
+  font-family: var(--serif); font-size: 1rem;
+  color: var(--ink); margin-bottom: 1.25rem; font-style: italic;
+}
+.story-path { position: relative; }
+.story-path::before {
+  content: ''; position: absolute; left: 11px; top: 20px; bottom: 20px;
+  width: 1px; background: var(--rose-lt);
+}
+.path-item { display: flex; gap: 1rem; align-items: flex-start; padding: 0.6rem 0; }
+.path-dot {
+  width: 23px; height: 23px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0; font-size: 0.65rem; font-weight: 600;
+  position: relative; z-index: 1; margin-top: 1px;
+}
+.path-dot.done { background: var(--rose); color: #fff; }
+.path-dot.now  { background: var(--warm); color: #fff; }
+.path-dot.next { background: var(--bg2); color: var(--ink3); border: 1.5px solid #D4C9BF; }
+.path-title { font-size: 0.875rem; font-weight: 500; color: var(--ink); }
+.path-sub   { font-size: 0.775rem; color: var(--ink3); margin-top: 1px; }
+
+@media (max-width: 768px) {
+  .hero-section { grid-template-columns: 1fr; padding: 7rem 1.25rem 3rem; gap: 2rem; }
+}

@@ -1,0 +1,23 @@
+.project-card {
+  background: #fff; border: 1px solid #E8E1DA; border-radius: 14px;
+  margin-bottom: 2.5rem; overflow: hidden;
+  transition: box-shadow 0.25s, border-color 0.25s;
+}
+.project-card:hover { box-shadow: 0 12px 40px rgba(181,99,90,0.08); border-color: var(--rose-mid); }
+.project-card.featured { border-color: var(--rose-mid); }
+.pc-topbar { height: 3px; background: linear-gradient(90deg, var(--rose), var(--warm)); }
+.pc-topbar.teal    { background: linear-gradient(90deg, var(--teal), #8bc4b4); }
+.pc-topbar.neutral { background: linear-gradient(90deg, #B0A8A0, #CEC6BE); }
+.pc-header {
+  padding: 1.6rem 2rem 1rem;
+  display: flex; justify-content: space-between;
+  align-items: flex-start; flex-wrap: wrap; gap: 0.75rem;
+}
+.pc-tags { display: flex; gap: 0.45rem; flex-wrap: wrap; }
+.pc-num  { font-family: var(--mono); font-size: 0.72rem; color: var(--ink3); }
+.pc-body { padding: 0 2rem 2rem; }
+.pc-title { font-family: var(--serif); font-size: 1.35rem; font-weight: 400; margin-bottom: 0.5rem; }
+.pc-lead  { font-size: 0.9rem; color: var(--ink2); line-height: 1.75; margin-bottom: 1.5rem; max-width: 700px; }
+@media (max-width: 768px) {
+  .pc-header, .pc-body { padding-left: 1.25rem; padding-right: 1.25rem; }
+}

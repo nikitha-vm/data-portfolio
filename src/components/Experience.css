@@ -1,0 +1,17 @@
+.exp-item { padding: 1.6rem 0; border-bottom: 1px solid #EDE7E1; }
+.exp-item:last-child { border-bottom: none; }
+.exp-top { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 0.5rem; margin-bottom: 0.6rem; }
+.exp-title { font-weight: 600; font-size: 0.975rem; }
+.exp-org   { color: var(--rose); font-size: 0.84rem; margin-top: 0.1rem; }
+.exp-date  { font-family: var(--mono); font-size: 0.72rem; color: var(--ink3); }
+.exp-bullets { list-style: none; padding: 0; }
+.exp-bullets li {
+  font-size: 0.875rem; color: var(--ink2);
+  padding: 0.2rem 0 0.2rem 1.2rem;
+  position: relative; line-height: 1.7;
+}
+.exp-bullets li::before {
+  content: '→'; position: absolute; left: 0;
+  color: var(--rose); font-size: 0.75rem; top: 0.28rem;
+}
+.exp-bullets li strong { color: var(--ink); }
